@@ -1,7 +1,7 @@
 'use client';
 
 import { Navbar } from '@/components/landing/navbar';
-import { ScrollVideoBackground } from '@/components/landing/scroll-video';
+import { ScrollWebGLBackground } from '@/components/landing/scroll-webgl-background';
 import { FeaturesGrid } from '@/components/landing/features-grid';
 import { HowItWorks } from '@/components/landing/how-it-works';
 import { Stats } from '@/components/landing/stats';
@@ -19,10 +19,10 @@ import { ArrowRight, ShieldCheck, Gem, Lock } from 'lucide-react';
 export default function Home() {
   return (
     <main className="relative bg-black text-white min-h-screen">
-      {/* Video Background - covers entire page */}
-      <ScrollVideoBackground>
+      {/* WebGL Background - covers entire page */}
+      <ScrollWebGLBackground>
         <></>
-      </ScrollVideoBackground>
+      </ScrollWebGLBackground>
 
       {/* All content with proper z-index to be in front */}
       <div className="relative z-10">
