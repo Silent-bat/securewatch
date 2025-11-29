@@ -9,6 +9,7 @@ const tiers = [
     {
         name: 'Collector',
         price: 'Coming Soon',
+        period: undefined,
         description: 'Perfect for watch enthusiasts starting their collection',
         features: [
             'Browse unlimited watches',
@@ -24,6 +25,7 @@ const tiers = [
     {
         name: 'Dealer',
         price: 'Coming Soon',
+        period: undefined,
         description: 'For professional dealers and serious collectors',
         features: [
             'List unlimited watches',
@@ -40,6 +42,7 @@ const tiers = [
     {
         name: 'Enterprise',
         price: 'Coming Soon',
+        period: undefined,
         description: 'Tailored solutions for auction houses and retailers',
         features: [
             'White-label solution',
