@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 const tiers = [
     {
         name: 'Collector',
-        price: 'Free',
+        price: 'Coming Soon',
         description: 'Perfect for watch enthusiasts starting their collection',
         features: [
             'Browse unlimited watches',
@@ -23,8 +23,7 @@ const tiers = [
     },
     {
         name: 'Dealer',
-        price: '$49',
-        period: '/month',
+        price: 'Coming Soon',
         description: 'For professional dealers and serious collectors',
         features: [
             'List unlimited watches',
@@ -40,7 +39,7 @@ const tiers = [
     },
     {
         name: 'Enterprise',
-        price: 'Custom',
+        price: 'Coming Soon',
         description: 'Tailored solutions for auction houses and retailers',
         features: [
             'White-label solution',

@@ -53,8 +53,7 @@ export function FinalCTA() {
                         </Button>
                         <Button
                             size="lg"
-                            variant="outline"
-                            className="h-16 px-12 text-lg rounded-full border-2 border-white/30 hover:bg-white/10 text-white"
+                            className="h-16 px-12 text-lg rounded-full bg-white/10 text-white hover:bg-white/20 border-2 border-white/30"
                             asChild
                         >
                             <Link href="/auth/register">Create Free Account</Link>
