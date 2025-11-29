@@ -120,8 +120,8 @@ export function ScrollWebGLBackground({ children }: ScrollWebGLBackgroundProps) 
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 
-        // Load frames (every 4th frame = 113 frames total for 450 frame video)
-        const frameCount = 113;
+        // Load frames (20fps = 300 frames total for 15 second video)
+        const frameCount = 300;
         const frames: HTMLImageElement[] = [];
         let loadedCount = 0;
 
