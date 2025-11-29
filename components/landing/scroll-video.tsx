@@ -57,23 +57,23 @@ export function ScrollVideoBackground({ children }: ScrollVideoBackgroundProps) 
     }, []);
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if (videoRef.current && duration && isVideoLoaded) {
-            const now = performance.now();
-            // Throttle updates to every 16ms (60fps) for better performance
-            if (now - lastUpdateTime.current < 16) return;
-            lastUpdateTime.current = now;
+        const video = videoRef.current;
+        if (!video || !duration || !isVideoLoaded) return;
 
-            const time = latest * duration;
-            if (Number.isFinite(time)) {
-                const video = videoRef.current;
-                // Only update if the time difference is significant (more than 0.1 seconds)
-                if (Math.abs(video.currentTime - time) > 0.1) {
-                    // Use fastSeek if available for better performance
-                    if ('fastSeek' in video) {
-                        (video as any).fastSeek(time);
-                    } else {
-                        video.currentTime = time;
-                    }
+        const now = performance.now();
+        // Throttle updates to every 16ms (60fps) for better performance
+        if (now - lastUpdateTime.current < 16) return;
+        lastUpdateTime.current = now;
+
+        const time = latest * duration;
+        if (Number.isFinite(time)) {
+            // Only update if the time difference is significant (more than 0.1 seconds)
+            if (Math.abs(video.currentTime - time) > 0.1) {
+                // Use fastSeek if available for better performance
+                if ('fastSeek' in video) {
+                    (video as any).fastSeek(time);
+                } else {
+                    video.currentTime = time;
                 }
             }
         }
